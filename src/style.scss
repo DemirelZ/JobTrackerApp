@@ -64,9 +64,19 @@
   }
   
   .card {
+    display: flex;
     background: gray;
     border-radius: 10px;
     padding: 20px;
+    position: relative;
+
+    .deleteButton {
+      font-size: 36px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+    }
   
     .head {
       display: flex;
@@ -91,6 +101,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       row-gap: 30px;
+      width: max-content;
   
       .field {
         display: flex;

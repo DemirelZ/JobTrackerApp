@@ -12,7 +12,7 @@ const JobList = () => {
 
   const state = useSelector((store) => store);
 
-  console.log(state);
+  // console.log(state);
 
   const fetchData = () => {
     axios

@@ -100,49 +100,22 @@
       "date": "10/2/2023"
     },
     {
-      "position": "Developer",
-      "company": "EnglishCentral",
-      "location": "China",
+      "position": "IOS Dev",
+      "company": "Apple",
+      "location": "Silikon Valley",
       "status": "Mülakat",
       "type": "Uzaktan",
-      "id": "fee4c42b-a471-44f5-8879-d5845be16edb",
-      "date": "17.10.2023"
+      "id": "e725c2e3-0b98-418a-95bf-8c010fed39cc",
+      "date": "2023-10-14T20:05:07.276Z"
     },
     {
-      "position": "Developer",
-      "company": "Facebook",
-      "location": "İstanbul",
-      "status": "Mülakat",
-      "type": "Staj",
-      "id": "fa9320fb-5b53-4ed6-bb84-0bdc5a1065cd",
-      "date": "17.10.2023"
-    },
-    {
-      "position": "Developer",
-      "company": "Amazon",
-      "location": "Ankara",
-      "status": "Mülakat",
-      "type": "Uzaktan",
-      "id": "6658cb00-587d-4809-8518-db11aca35000",
-      "date": "17.10.2023"
-    },
-    {
-      "position": "Tester",
-      "company": "Amazon",
-      "location": "NewYork",
+      "position": "dfsaf",
+      "company": "sfds",
+      "location": "fdsf",
       "status": "Reddedildi",
-      "type": "Yarı Zamanlı",
-      "id": "27b1a213-68d5-4017-ab3c-2672fc92f55c",
-      "date": "17.10.2023"
-    },
-    {
-      "position": "Developer",
-      "company": "Amazon",
-      "location": "Ankara",
-      "status": "Devam Ediyor",
-      "type": "Tam Zamanlı",
-      "id": "67d7178d-3aff-4222-b205-f2bc4bfe437e",
-      "date": "17.10.2023"
+      "type": "Tam Zaman",
+      "id": "5c0ecb65-e4ea-4d97-bf2a-c87e671c8b8e",
+      "date": "2023-10-14T20:07:18.223Z"
     }
   ]
 }

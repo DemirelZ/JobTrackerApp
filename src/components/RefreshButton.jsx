@@ -2,10 +2,10 @@ import React from "react";
 
 const RefreshButton = ({ handleClick }) => {
   return (
-    <button onClick={handleClick} class="button" type="button">
+    <button onClick={handleClick} className="button" type="button">
       <svg
         viewBox="0 0 16 16"
-        class="bi bi-arrow-repeat"
+        className="bi bi-arrow-repeat"
         fill="currentColor"
         height="16"
         width="16"

@@ -17,6 +17,11 @@ const jobSlice = createSlice({
       state.initialized = true;
       state.isError = false;
     },
+    deleteJob:(state, action)=>{
+      
+      const filtered=state.jobs.filter((job)=> job.id !== action.payload )
+      state.jobs=filtered
+    },
     setError: (state) => {
       state.isError = true;
       state.initialized = true;
@@ -67,6 +72,7 @@ const jobSlice = createSlice({
 
 export const {
   setJob,
+  deleteJob,
   setError,
   filterBySearch,
   filterByStatus,

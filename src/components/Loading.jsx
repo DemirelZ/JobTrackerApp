@@ -3,7 +3,7 @@ import React from "react";
 const Loading = () => {
   return (
     <div>
-      <svg height="108px" width="108px" viewBox="0 0 128 128" class="loader">
+      <svg height="108px" width="108px" viewBox="0 0 128 128" className="loader">
         <defs>
           <clipPath id="loader-eyes">
             <circle
@@ -11,14 +11,14 @@ const Loading = () => {
               r="8"
               cy="64"
               cx="64"
-              class="loader__eye1"
+              className="loader__eye1"
             ></circle>
             <circle
               transform="rotate(40,64,64) translate(0,-56)"
               r="8"
               cy="64"
               cx="64"
-              class="loader__eye2"
+              className="loader__eye2"
             ></circle>
           </clipPath>
           <linearGradient y2="1" x2="0" y1="0" x1="0" id="loader-grad">
@@ -53,14 +53,14 @@ const Loading = () => {
                 r="56"
                 cy="64"
                 cx="64"
-                class="loader__mouth1"
+                className="loader__mouth1"
               ></circle>
               <circle
                 transform="rotate(0,64,64)"
                 r="56"
                 cy="64"
                 cx="64"
-                class="loader__mouth2"
+                className="loader__mouth2"
               ></circle>
             </g>
           </g>
@@ -77,14 +77,14 @@ const Loading = () => {
                 r="56"
                 cy="64"
                 cx="64"
-                class="loader__mouth1"
+                className="loader__mouth1"
               ></circle>
               <circle
                 transform="rotate(0,64,64)"
                 r="56"
                 cy="64"
                 cx="64"
-                class="loader__mouth2"
+                className="loader__mouth2"
               ></circle>
             </g>
           </g>
