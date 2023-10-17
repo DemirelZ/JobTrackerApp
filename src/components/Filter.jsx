@@ -1,17 +1,13 @@
-import { useRef } from 'react';
-import {
-  sortOptions,
-  typeOptions,
-  statusOptions,
-} from '../constants';
-import { useDispatch } from 'react-redux';
+import { useRef } from "react";
+import { sortOptions, typeOptions, statusOptions } from "../constants";
+import { useDispatch } from "react-redux";
 import {
   clearFilters,
   filterBySearch,
   filterByStatus,
   filterByType,
   sortJobs,
-} from '../redux/jobSlice';
+} from "../redux/jobSlice";
 
 const Filter = () => {
   const dispatch = useDispatch();
@@ -28,23 +24,19 @@ const Filter = () => {
   //TODO form elemanlarını sıfırla
   const handleReset = () => {
     dispatch(clearFilters());
-    searchRef.current.value = '';
-    statusRef.current.value = 'Seçiniz';
-    typeRef.current.value = 'Seçiniz';
-    sortRef.current.value = 'Seçiniz';
+    searchRef.current.value = "";
+    statusRef.current.value = "Seçiniz";
+    typeRef.current.value = "Seçiniz";
+    sortRef.current.value = "Seçiniz";
   };
 
   return (
     <section className="filter-sec">
-      <h2>Filtreleme Formu</h2>
+      <h2>Filter</h2>
       <form>
         <div>
           <label>Search by company</label>
-          <input
-            ref={searchRef}
-            onChange={handleChange}
-            type="search"
-          />
+          <input ref={searchRef} onChange={handleChange} type="search" />
         </div>
         {/* selectler */}
         <div>

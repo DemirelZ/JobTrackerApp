@@ -14,24 +14,24 @@ const JobList = () => {
 
   console.log(state);
 
-  const fetchData=()=>{
+  const fetchData = () => {
     axios
       .get("http://localhost:4000/jobs")
       .then((res) => dispatch(setJob(res.data)))
       .catch((err) => dispatch(setError(err)));
-  }
+  };
 
   useEffect(() => {
-    fetchData()
+    fetchData();
   }, []);
 
   return (
     <div className="list-page">
-
-      <Filter/>
+      <Filter />
 
       <h3 className="job-count">
-      Displaying ({state.jobs.length}) of the ({state.mainJobs.length}) jobs found
+        Displaying ({state.jobs.length}) of the ({state.mainJobs.length}) jobs
+        found
       </h3>
 
       <section className="job-list">
@@ -41,7 +41,8 @@ const JobList = () => {
           state.jobs.map((job, i) => <Card key={i} job={job} />)
         ) : (
           <p className="error-msg">
-            <span>Sorry, an error occurred!!!</span> <RefreshButton handleClick={()=>fetchData}  />{" "}
+            <span>Sorry, an error occurred!!!</span>{" "}
+            <RefreshButton handleClick={() => fetchData} />{" "}
           </p>
         )}
       </section>

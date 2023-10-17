@@ -1,9 +1,6 @@
 import React from "react";
 
-const RefreshButton = ({handleClick}) => {
-
-   
-
+const RefreshButton = ({ handleClick }) => {
   return (
     <button onClick={handleClick} class="button" type="button">
       <svg

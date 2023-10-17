@@ -7,31 +7,29 @@ import axios from "axios";
 const AddJob = () => {
   const navigate = useNavigate();
 
-
-  const handleSubmit=(e)=>{
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    const form = new FormData(e.target)
+    const form = new FormData(e.target);
 
-    const newJob=Object.fromEntries(form.entries());
+    const newJob = Object.fromEntries(form.entries());
 
-    newJob.id=v4();
-    newJob.date= new Date().toLocaleDateString();
+    newJob.id = v4();
+    newJob.date = new Date().toLocaleDateString();
 
-    if(!newJob.status || !newJob.type){
-      toast.info('Please select type and status')
+    if (!newJob.status || !newJob.type) {
+      toast.info("Please select type and status");
       return;
     }
 
-    axios.post('http://localhost:4000/jobs', newJob)
-    .then(()=>{
-      navigate('/')
-      toast.success('Addition successful')
-    })
-    .catch(()=> toast.error('Addition is not successful'))
-  }
-
-
+    axios
+      .post("http://localhost:4000/jobs", newJob)
+      .then(() => {
+        navigate("/");
+        toast.success("Addition successful");
+      })
+      .catch(() => toast.error("Addition is not successful"));
+  };
 
   return (
     <div className="add-page">

@@ -1,24 +1,22 @@
-import { MdLocationOn } from 'react-icons/md';
-import { FaSuitcase } from 'react-icons/fa';
-import { BsFillCalendarDateFill } from 'react-icons/bs';
+import { MdLocationOn } from "react-icons/md";
+import { FaSuitcase } from "react-icons/fa";
+import { BsFillCalendarDateFill } from "react-icons/bs";
 
-const Card = ({job}) => {
-
-  const getClassName=()=>{
+const Card = ({ job }) => {
+  const getClassName = () => {
     switch (job.status) {
       case "Devam Ediyor":
-        return "pending"
+        return "pending";
       case "Reddedildi":
-        return "rejected"
+        return "rejected";
       case "Mülakat":
-        return "imterview"
-        
+        return "imterview";
       default:
-        return "default"
+        return "default";
     }
-  }
-  
-console.log(job);
+  };
+
+  console.log(job);
 
   return (
     <div className="card">
