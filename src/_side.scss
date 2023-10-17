@@ -1,0 +1,247 @@
+
+
+  //Loader
+  .loader {
+    width: 8em;
+    height: 8em;
+  }
+  
+  .loader__eye1,
+    .loader__eye2,
+    .loader__mouth1,
+    .loader__mouth2 {
+    animation: eye1 3s ease-in-out infinite;
+  }
+  
+  .loader__eye1,
+    .loader__eye2 {
+    transform-origin: 64px 64px;
+  }
+  
+  .loader__eye2 {
+    animation-name: eye2;
+  }
+  
+  .loader__mouth1 {
+    animation-name: mouth1;
+  }
+  
+  .loader__mouth2 {
+    animation-name: mouth2;
+    visibility: hidden;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: hsl(var(--hue), 90%, 10%);
+      --fg: hsl(var(--hue), 90%, 90%);
+    }
+  }
+  
+  @keyframes eye1 {
+    from {
+      transform: rotate(-260deg) translate(0, -56px);
+    }
+  
+    50%,
+      60% {
+      animation-timing-function: cubic-bezier(0.17, 0, 0.58, 1);
+      transform: rotate(-40deg) translate(0, -56px) scale(1);
+    }
+  
+    to {
+      transform: rotate(225deg) translate(0, -56px) scale(0.35);
+    }
+  }
+  
+  @keyframes eye2 {
+    from {
+      transform: rotate(-260deg) translate(0, -56px);
+    }
+  
+    50% {
+      transform: rotate(40deg) translate(0, -56px) rotate(-40deg) scale(1);
+    }
+  
+    52.5% {
+      transform: rotate(40deg) translate(0, -56px) rotate(-40deg) scale(1, 0);
+    }
+  
+    55%,
+      70% {
+      animation-timing-function: cubic-bezier(0, 0, 0.28, 1);
+      transform: rotate(40deg) translate(0, -56px) rotate(-40deg) scale(1);
+    }
+  
+    to {
+      transform: rotate(150deg) translate(0, -56px) scale(0.4);
+    }
+  }
+  
+  @keyframes eyeBlink {
+    from,
+      25%,
+      75%,
+      to {
+      transform: scaleY(1);
+    }
+  
+    50% {
+      transform: scaleY(0);
+    }
+  }
+  
+  @keyframes mouth1 {
+    from {
+      animation-timing-function: ease-in;
+      stroke-dasharray: 0 351.86;
+      stroke-dashoffset: 0;
+    }
+  
+    25% {
+      animation-timing-function: ease-out;
+      stroke-dasharray: 175.93 351.86;
+      stroke-dashoffset: 0;
+    }
+  
+    50% {
+      animation-timing-function: steps(1, start);
+      stroke-dasharray: 175.93 351.86;
+      stroke-dashoffset: -175.93;
+      visibility: visible;
+    }
+  
+    75%,
+      to {
+      visibility: hidden;
+    }
+  }
+  
+  @keyframes mouth2 {
+    from {
+      animation-timing-function: steps(1, end);
+      visibility: hidden;
+    }
+  
+    50% {
+      animation-timing-function: ease-in-out;
+      visibility: visible;
+      stroke-dashoffset: 0;
+    }
+  
+    to {
+      stroke-dashoffset: -351.86;
+    }
+  }
+  
+  
+  // Loader
+
+  //refresh button
+
+  .button {
+    color: white;
+    background-color: #222;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    line-height: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    text-align: center;
+    margin-right: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    border: none;
+  }
+  
+  .button:hover {
+    background-color: #333;
+  }
+  
+  .button svg {
+    display: inline;
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-right: 0.75rem;
+    color: white;
+  }
+  
+  .button:focus svg {
+    animation: spin_357 0.5s linear;
+  }
+  
+  @keyframes spin_357 {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  
+  //refresh button
+
+  //button
+
+  button {
+    border: none;
+    display: block;
+    position: relative;
+    padding: 0.7em 2.4em;
+    font-size: 18px;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    color: rgb(226, 68, 160);
+    z-index: 1;
+    font-family: inherit;
+    font-weight: 500;
+  }
+  
+  button span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+    border: 4px solid  rgb(226, 68, 160);
+  }
+  
+  button span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8%;
+    height: 500%;
+    background: var(--lightgray);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-60deg);
+    transition: all 0.3s;
+  }
+  
+  button:hover span::before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 100%;
+    background:  rgb(226, 68, 160);
+  }
+  
+  button:hover {
+    color: white;
+  }
+  
+  button:active span::before {
+    background: #2751cd;
+  }
+  
+  
+  //button
+
