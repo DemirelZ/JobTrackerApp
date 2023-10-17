@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setJob, setError } from "./../redux/jobSlice";
 import Loading from "../components/Loading";
 import RefreshButton from "../components/refreshButton";
+import Filter from "../components/Filter";
 
 const JobList = () => {
   const dispatch = useDispatch();
@@ -26,9 +27,11 @@ const JobList = () => {
 
   return (
     <div className="list-page">
+
+      <Filter/>
+
       <h3 className="job-count">
-        Bulunan ({state.jobs.length}) iş arasından ({state.jobs.length}) tanesi
-        görüntüleniyor
+      Displaying ({state.jobs.length}) of the ({state.mainJobs.length}) jobs found
       </h3>
 
       <section className="job-list">
